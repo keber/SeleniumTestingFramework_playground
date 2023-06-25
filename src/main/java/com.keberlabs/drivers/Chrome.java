@@ -13,6 +13,7 @@ public class Chrome implements DriverStrategy {
         ChromeOptions options = new ChromeOptions();
         options.setExperimentalOption("useAutomationExtension", false);
         options.addArguments("--no-sandbox");
+        options.addArguments("--headless");
         return new ChromeDriver(options);
     }
 
