@@ -8,7 +8,7 @@ public class Chrome implements DriverStrategy {
     @Override
 
     public WebDriver setStrategy() {
-        System.setProperty("webdriver.chrome.driver","src/main/resources/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver","src/main/resources/chromedriver"); // Linux
 
         ChromeOptions options = new ChromeOptions();
         options.setExperimentalOption("useAutomationExtension", false);
