@@ -62,7 +62,7 @@ public class Main {
         driver.quit();
 */
 
-        DriverSingleton driverSingleton = DriverSingleton.getInstance("Chrome");
+        DriverSingleton driverSingleton = DriverSingleton.getInstance("ChromeWindows");
         WebDriver driver = driverSingleton.getDriver();
 
         driver.get("https://www.wikipedia.org/");

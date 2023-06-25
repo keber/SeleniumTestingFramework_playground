@@ -5,8 +5,10 @@ public class DriverStrategySelector {
         switch(browser){
             case "Chrome":
                 return new Chrome();
+            case "ChromeWindows":
+                return new ChromeWindows();
             case "Firefox":
-                //return new Firefox();
+                return new Firefox();
             default:
                 return null;
         }

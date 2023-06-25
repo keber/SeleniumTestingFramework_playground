@@ -1,5 +1,6 @@
 package com.keberlabs;
 
+import com.keberlabs.drivers.DriverSingleton;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -19,8 +20,8 @@ public class MainTest {
     static WebDriver driver;
     @BeforeAll
     static void initializeDriver(){
-        System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
-        driver = new ChromeDriver();
+        DriverSingleton driverSingleton = DriverSingleton.getInstance("Chrome");
+        WebDriver driver = driverSingleton.getDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         //Maximizar la ventana
         driver.manage().window().maximize();
